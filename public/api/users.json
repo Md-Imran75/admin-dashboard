@@ -1,0 +1,1002 @@
+ [
+    {
+        "id": "5bae89a4-4959-4a79-b2aa-40824835f95f",
+        "userName": "user1",
+        "fullName": "User FullName 1",
+        "email": "user1@example.com",
+        "phone": "+1234567801",
+        "balance": 198.71,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "9d61c1d1-9916-4222-ab50-480eefdabe43",
+        "userName": "user2",
+        "fullName": "User FullName 2",
+        "email": "user2@example.com",
+        "phone": "+1234567802",
+        "balance": 6997.09,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "e90a8ba6-8f99-4d43-a6e6-bcdc91b19886",
+        "userName": "user3",
+        "fullName": "User FullName 3",
+        "email": "user3@example.com",
+        "phone": "+1234567803",
+        "balance": 4628.72,
+        "role": "Manager",
+        "status": "active"
+    },
+    {
+        "id": "49c55aed-de95-4af4-8c3a-747a3e8203b7",
+        "userName": "user4",
+        "fullName": "User FullName 4",
+        "email": "user4@example.com",
+        "phone": "+1234567804",
+        "balance": 2271.45,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "db65b545-8ecf-4527-b7cf-afb9bbb55664",
+        "userName": "user5",
+        "fullName": "User FullName 5",
+        "email": "user5@example.com",
+        "phone": "+1234567805",
+        "balance": 3361.58,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "de6f23ba-efce-4173-b20a-750beb1ed4fc",
+        "userName": "user6",
+        "fullName": "User FullName 6",
+        "email": "user6@example.com",
+        "phone": "+1234567806",
+        "balance": 9765.65,
+        "role": "User",
+        "status": "rejected"
+    },
+    {
+        "id": "c746d90e-c09c-449a-8a4c-18d417b107fd",
+        "userName": "user7",
+        "fullName": "User FullName 7",
+        "email": "user7@example.com",
+        "phone": "+1234567807",
+        "balance": 2257.39,
+        "role": "Seller",
+        "status": "active"
+    },
+    {
+        "id": "701678a9-f099-4c77-a05f-41119b819dc8",
+        "userName": "user8",
+        "fullName": "User FullName 8",
+        "email": "user8@example.com",
+        "phone": "+1234567808",
+        "balance": 6889.14,
+        "role": "Technician",
+        "status": "pending"
+    },
+    {
+        "id": "bff48539-3216-4d0b-b6de-700291808c97",
+        "userName": "user9",
+        "fullName": "User FullName 9",
+        "email": "user9@example.com",
+        "phone": "+1234567809",
+        "balance": 7469.07,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "b0afd9f0-2ce8-4695-b189-b6feefa569ed",
+        "userName": "user10",
+        "fullName": "User FullName 10",
+        "email": "user10@example.com",
+        "phone": "+1234567810",
+        "balance": 9266.32,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "5f5abe89-05cb-4380-86fb-baa886fd6a21",
+        "userName": "user11",
+        "fullName": "User FullName 11",
+        "email": "user11@example.com",
+        "phone": "+1234567811",
+        "balance": 3225.47,
+        "role": "User",
+        "status": "blocked"
+    },
+    {
+        "id": "cc1f85f7-60ed-40a5-8726-b29b8027c4b6",
+        "userName": "user12",
+        "fullName": "User FullName 12",
+        "email": "user12@example.com",
+        "phone": "+1234567812",
+        "balance": 9173.28,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "1be4273a-29d5-455b-863a-8347efad965f",
+        "userName": "user13",
+        "fullName": "User FullName 13",
+        "email": "user13@example.com",
+        "phone": "+1234567813",
+        "balance": 9711.11,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "81f4cc31-1113-4130-b5ad-805e0826e9b5",
+        "userName": "user14",
+        "fullName": "User FullName 14",
+        "email": "user14@example.com",
+        "phone": "+1234567814",
+        "balance": 7886.71,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "afcf41c5-59cb-47b8-ab55-1298eda1c984",
+        "userName": "user15",
+        "fullName": "User FullName 15",
+        "email": "user15@example.com",
+        "phone": "+1234567815",
+        "balance": 4080.56,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "d2f26974-0333-4523-8cc7-d12d3075d626",
+        "userName": "user16",
+        "fullName": "User FullName 16",
+        "email": "user16@example.com",
+        "phone": "+1234567816",
+        "balance": 9569.51,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "061f619e-51f9-4bba-ba3e-0ad34e902847",
+        "userName": "user17",
+        "fullName": "User FullName 17",
+        "email": "user17@example.com",
+        "phone": "+1234567817",
+        "balance": 6866.53,
+        "role": "Manager",
+        "status": "active"
+    },
+    {
+        "id": "2ac0a42b-2e04-4fbc-9e1d-0dc598f5443e",
+        "userName": "user18",
+        "fullName": "User FullName 18",
+        "email": "user18@example.com",
+        "phone": "+1234567818",
+        "balance": 9527.7,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "6bdd9afd-77d1-4531-b873-3dec4016692a",
+        "userName": "user19",
+        "fullName": "User FullName 19",
+        "email": "user19@example.com",
+        "phone": "+1234567819",
+        "balance": 3234.44,
+        "role": "Manager",
+        "status": "pending"
+    },
+    {
+        "id": "2c7283d9-eec4-442c-b1b9-cb8db76da2a5",
+        "userName": "user20",
+        "fullName": "User FullName 20",
+        "email": "user20@example.com",
+        "phone": "+1234567820",
+        "balance": 2305.08,
+        "role": "Technician",
+        "status": "rejected"
+    },
+    {
+        "id": "0ab7ba79-ae77-4e7e-a5d0-13f06045fe8b",
+        "userName": "user21",
+        "fullName": "User FullName 21",
+        "email": "user21@example.com",
+        "phone": "+1234567821",
+        "balance": 241.5,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "05392fd5-7b97-4d4f-bdd2-f0ad3ac49eac",
+        "userName": "user22",
+        "fullName": "User FullName 22",
+        "email": "user22@example.com",
+        "phone": "+1234567822",
+        "balance": 3689.28,
+        "role": "User",
+        "status": "blocked"
+    },
+    {
+        "id": "99d3ae76-10e1-448a-ae89-ac44505d239c",
+        "userName": "user23",
+        "fullName": "User FullName 23",
+        "email": "user23@example.com",
+        "phone": "+1234567823",
+        "balance": 6136.57,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "fd6ac44b-4ef8-4f48-beaf-70df92c2eb76",
+        "userName": "user24",
+        "fullName": "User FullName 24",
+        "email": "user24@example.com",
+        "phone": "+1234567824",
+        "balance": 469.86,
+        "role": "Technician",
+        "status": "active"
+    },
+    {
+        "id": "1ebf95ea-fea4-48af-acd7-5598a5dbc9d3",
+        "userName": "user25",
+        "fullName": "User FullName 25",
+        "email": "user25@example.com",
+        "phone": "+1234567825",
+        "balance": 3615.46,
+        "role": "Seller",
+        "status": "rejected"
+    },
+    {
+        "id": "606ef874-0572-408d-b5d2-f84f54556fb7",
+        "userName": "user26",
+        "fullName": "User FullName 26",
+        "email": "user26@example.com",
+        "phone": "+1234567826",
+        "balance": 1604.96,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "da1ca6dc-3433-4360-af6f-1e0468075dd2",
+        "userName": "user27",
+        "fullName": "User FullName 27",
+        "email": "user27@example.com",
+        "phone": "+1234567827",
+        "balance": 1005.21,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "e83071ac-3324-42b2-8d8c-68d81cd6f9b2",
+        "userName": "user28",
+        "fullName": "User FullName 28",
+        "email": "user28@example.com",
+        "phone": "+1234567828",
+        "balance": 650.54,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "78545fae-f94d-4b7c-904b-e23f58c3a91c",
+        "userName": "user29",
+        "fullName": "User FullName 29",
+        "email": "user29@example.com",
+        "phone": "+1234567829",
+        "balance": 3497.31,
+        "role": "User",
+        "status": "pending"
+    },
+    {
+        "id": "54dea41e-c559-4616-80d4-285f855383d7",
+        "userName": "user30",
+        "fullName": "User FullName 30",
+        "email": "user30@example.com",
+        "phone": "+1234567830",
+        "balance": 6546.16,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "30c70eb6-7632-4f95-a370-fcedde367dcc",
+        "userName": "user31",
+        "fullName": "User FullName 31",
+        "email": "user31@example.com",
+        "phone": "+1234567831",
+        "balance": 6573.52,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "93ec835f-5dc0-4575-9816-a5f218957076",
+        "userName": "user32",
+        "fullName": "User FullName 32",
+        "email": "user32@example.com",
+        "phone": "+1234567832",
+        "balance": 865.93,
+        "role": "Technician",
+        "status": "pending"
+    },
+    {
+        "id": "9d431e94-13c4-4bce-af79-dc3e5f0b0c1a",
+        "userName": "user33",
+        "fullName": "User FullName 33",
+        "email": "user33@example.com",
+        "phone": "+1234567833",
+        "balance": 7361.58,
+        "role": "User",
+        "status": "rejected"
+    },
+    {
+        "id": "0c1ad890-f1f5-453a-9611-dbc6903e6082",
+        "userName": "user34",
+        "fullName": "User FullName 34",
+        "email": "user34@example.com",
+        "phone": "+1234567834",
+        "balance": 1299.22,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "c9281c93-a9ec-42ba-9543-c2166fc5362a",
+        "userName": "user35",
+        "fullName": "User FullName 35",
+        "email": "user35@example.com",
+        "phone": "+1234567835",
+        "balance": 4454.06,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "d70b279f-5e8a-4f40-a2e0-7e6b8d709bdf",
+        "userName": "user36",
+        "fullName": "User FullName 36",
+        "email": "user36@example.com",
+        "phone": "+1234567836",
+        "balance": 6205.07,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "2f078c6e-a6e4-41aa-a1d3-a88ec5603493",
+        "userName": "user37",
+        "fullName": "User FullName 37",
+        "email": "user37@example.com",
+        "phone": "+1234567837",
+        "balance": 6107.22,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "6979a061-c0a3-4bbd-9b27-0245b302fb66",
+        "userName": "user38",
+        "fullName": "User FullName 38",
+        "email": "user38@example.com",
+        "phone": "+1234567838",
+        "balance": 2607.2,
+        "role": "User",
+        "status": "rejected"
+    },
+    {
+        "id": "07b7a696-b9d0-417b-9fd5-d1dcae73ad46",
+        "userName": "user39",
+        "fullName": "User FullName 39",
+        "email": "user39@example.com",
+        "phone": "+1234567839",
+        "balance": 1491.73,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "1d13f8e8-ad75-44d8-9e7a-42e794b72a5a",
+        "userName": "user40",
+        "fullName": "User FullName 40",
+        "email": "user40@example.com",
+        "phone": "+1234567840",
+        "balance": 3360.66,
+        "role": "User",
+        "status": "rejected"
+    },
+    {
+        "id": "e58dba0f-6d2c-4243-ae36-3db6adb0949a",
+        "userName": "user41",
+        "fullName": "User FullName 41",
+        "email": "user41@example.com",
+        "phone": "+1234567841",
+        "balance": 7406.01,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "c4b7e140-1368-4e0d-afaa-000a1fc7d9ba",
+        "userName": "user42",
+        "fullName": "User FullName 42",
+        "email": "user42@example.com",
+        "phone": "+1234567842",
+        "balance": 1526.7,
+        "role": "Manager",
+        "status": "active"
+    },
+    {
+        "id": "9f020b51-d579-465e-9b34-13e1d8b3bfc7",
+        "userName": "user43",
+        "fullName": "User FullName 43",
+        "email": "user43@example.com",
+        "phone": "+1234567843",
+        "balance": 4261.88,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "21a23383-0839-4995-98c6-9b8728b01448",
+        "userName": "user44",
+        "fullName": "User FullName 44",
+        "email": "user44@example.com",
+        "phone": "+1234567844",
+        "balance": 4225.37,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "65b0ee1f-b9e8-4180-b6c8-09ba646b514c",
+        "userName": "user45",
+        "fullName": "User FullName 45",
+        "email": "user45@example.com",
+        "phone": "+1234567845",
+        "balance": 3387.04,
+        "role": "Manager",
+        "status": "pending"
+    },
+    {
+        "id": "3b8caf78-03d5-45f0-87f7-71eaa880af30",
+        "userName": "user46",
+        "fullName": "User FullName 46",
+        "email": "user46@example.com",
+        "phone": "+1234567846",
+        "balance": 5052.91,
+        "role": "Manager",
+        "status": "pending"
+    },
+    {
+        "id": "2e1e9497-2fc8-45ad-9b90-fb67093f2ec1",
+        "userName": "user47",
+        "fullName": "User FullName 47",
+        "email": "user47@example.com",
+        "phone": "+1234567847",
+        "balance": 8668.13,
+        "role": "Seller",
+        "status": "active"
+    },
+    {
+        "id": "1b556c8d-a1e4-453c-b095-50ff13a9cd27",
+        "userName": "user48",
+        "fullName": "User FullName 48",
+        "email": "user48@example.com",
+        "phone": "+1234567848",
+        "balance": 1593.67,
+        "role": "Technician",
+        "status": "pending"
+    },
+    {
+        "id": "8f331f10-532e-4266-a06d-af8f8c949c05",
+        "userName": "user49",
+        "fullName": "User FullName 49",
+        "email": "user49@example.com",
+        "phone": "+1234567849",
+        "balance": 7398.01,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "9302b4f9-baf8-4ee9-850e-771236f87768",
+        "userName": "user50",
+        "fullName": "User FullName 50",
+        "email": "user50@example.com",
+        "phone": "+1234567850",
+        "balance": 4609.98,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "aaa18f05-6194-43e0-a890-0cd1248eb293",
+        "userName": "user51",
+        "fullName": "User FullName 51",
+        "email": "user51@example.com",
+        "phone": "+1234567851",
+        "balance": 5231.84,
+        "role": "Technician",
+        "status": "active"
+    },
+    {
+        "id": "5564f9fc-db70-485c-bd15-9fb2b9db9651",
+        "userName": "user52",
+        "fullName": "User FullName 52",
+        "email": "user52@example.com",
+        "phone": "+1234567852",
+        "balance": 5998.42,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "f149c61a-e096-4ee5-866a-7bad54a7ec8d",
+        "userName": "user53",
+        "fullName": "User FullName 53",
+        "email": "user53@example.com",
+        "phone": "+1234567853",
+        "balance": 8129.46,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "92fbd6ec-a5ef-4bf5-ab1a-ac2ddb96247e",
+        "userName": "user54",
+        "fullName": "User FullName 54",
+        "email": "user54@example.com",
+        "phone": "+1234567854",
+        "balance": 5196.34,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "30ec41ec-65e3-4529-9b4a-8b9bd550ea90",
+        "userName": "user55",
+        "fullName": "User FullName 55",
+        "email": "user55@example.com",
+        "phone": "+1234567855",
+        "balance": 1228.28,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "b8aa8286-e05f-462a-8568-b335f80b0f90",
+        "userName": "user56",
+        "fullName": "User FullName 56",
+        "email": "user56@example.com",
+        "phone": "+1234567856",
+        "balance": 1030.87,
+        "role": "Technician",
+        "status": "pending"
+    },
+    {
+        "id": "79dcbecf-5a94-438b-a278-233fcc463a96",
+        "userName": "user57",
+        "fullName": "User FullName 57",
+        "email": "user57@example.com",
+        "phone": "+1234567857",
+        "balance": 8930.1,
+        "role": "Technician",
+        "status": "rejected"
+    },
+    {
+        "id": "c043870c-59d0-48fb-bd9e-b74240d8798a",
+        "userName": "user58",
+        "fullName": "User FullName 58",
+        "email": "user58@example.com",
+        "phone": "+1234567858",
+        "balance": 5495.85,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "aed2c69a-6d09-47da-b84e-5369410a2ae8",
+        "userName": "user59",
+        "fullName": "User FullName 59",
+        "email": "user59@example.com",
+        "phone": "+1234567859",
+        "balance": 5862.52,
+        "role": "Manager",
+        "status": "active"
+    },
+    {
+        "id": "cd36a216-1472-48b9-aafa-329f77a34494",
+        "userName": "user60",
+        "fullName": "User FullName 60",
+        "email": "user60@example.com",
+        "phone": "+1234567860",
+        "balance": 6820.31,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "e7c5d758-1449-4f7b-a98f-6a1336ddd13a",
+        "userName": "user61",
+        "fullName": "User FullName 61",
+        "email": "user61@example.com",
+        "phone": "+1234567861",
+        "balance": 8423.96,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "2533a829-fc49-49ef-8b92-c5c6afd6f5e7",
+        "userName": "user62",
+        "fullName": "User FullName 62",
+        "email": "user62@example.com",
+        "phone": "+1234567862",
+        "balance": 404.31,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "92764965-1c42-44a5-8675-01bf1034e9af",
+        "userName": "user63",
+        "fullName": "User FullName 63",
+        "email": "user63@example.com",
+        "phone": "+1234567863",
+        "balance": 2614.98,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "dfdd9ab3-844d-4323-a540-d12ddfeef6b5",
+        "userName": "user64",
+        "fullName": "User FullName 64",
+        "email": "user64@example.com",
+        "phone": "+1234567864",
+        "balance": 8185.34,
+        "role": "Technician",
+        "status": "active"
+    },
+    {
+        "id": "93b05739-4f3c-4f7b-a754-cb69d7de8f06",
+        "userName": "user65",
+        "fullName": "User FullName 65",
+        "email": "user65@example.com",
+        "phone": "+1234567865",
+        "balance": 8120.07,
+        "role": "User",
+        "status": "pending"
+    },
+    {
+        "id": "fb159550-0285-4d53-82f0-c07244b5f131",
+        "userName": "user66",
+        "fullName": "User FullName 66",
+        "email": "user66@example.com",
+        "phone": "+1234567866",
+        "balance": 5200.13,
+        "role": "Technician",
+        "status": "pending"
+    },
+    {
+        "id": "d7940f75-3ae3-4ce0-8fc1-1e45dbcd05a5",
+        "userName": "user67",
+        "fullName": "User FullName 67",
+        "email": "user67@example.com",
+        "phone": "+1234567867",
+        "balance": 7182.37,
+        "role": "Seller",
+        "status": "active"
+    },
+    {
+        "id": "b09e1ecb-01fd-4286-b87d-fdf88c0beebe",
+        "userName": "user68",
+        "fullName": "User FullName 68",
+        "email": "user68@example.com",
+        "phone": "+1234567868",
+        "balance": 5842.51,
+        "role": "Technician",
+        "status": "active"
+    },
+    {
+        "id": "130dfd61-9261-476f-932e-1ac43b807c87",
+        "userName": "user69",
+        "fullName": "User FullName 69",
+        "email": "user69@example.com",
+        "phone": "+1234567869",
+        "balance": 6317.83,
+        "role": "Manager",
+        "status": "active"
+    },
+    {
+        "id": "1173c046-df76-46fa-9d75-74868734c4a0",
+        "userName": "user70",
+        "fullName": "User FullName 70",
+        "email": "user70@example.com",
+        "phone": "+1234567870",
+        "balance": 2396.51,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "bb351f08-0b4f-4e00-9e2a-84c71b4e7a20",
+        "userName": "user71",
+        "fullName": "User FullName 71",
+        "email": "user71@example.com",
+        "phone": "+1234567871",
+        "balance": 7036.51,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "78788836-8a52-43d5-bb1f-db2136f29fbc",
+        "userName": "user72",
+        "fullName": "User FullName 72",
+        "email": "user72@example.com",
+        "phone": "+1234567872",
+        "balance": 2666.12,
+        "role": "User",
+        "status": "rejected"
+    },
+    {
+        "id": "cbb3183e-03d6-4cc8-8fb1-f02ab760209a",
+        "userName": "user73",
+        "fullName": "User FullName 73",
+        "email": "user73@example.com",
+        "phone": "+1234567873",
+        "balance": 1129.67,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "2b0d6398-1aec-43b1-8c1e-2965350f2c4c",
+        "userName": "user74",
+        "fullName": "User FullName 74",
+        "email": "user74@example.com",
+        "phone": "+1234567874",
+        "balance": 857.46,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "4b782cc2-b56c-441a-b6e5-e9aafa4d7541",
+        "userName": "user75",
+        "fullName": "User FullName 75",
+        "email": "user75@example.com",
+        "phone": "+1234567875",
+        "balance": 5956.23,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "2233c58c-dec8-4cae-977e-f6753149c9ca",
+        "userName": "user76",
+        "fullName": "User FullName 76",
+        "email": "user76@example.com",
+        "phone": "+1234567876",
+        "balance": 6428.6,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "b4f825d8-2dbd-4ce4-94a0-f7106a457c45",
+        "userName": "user77",
+        "fullName": "User FullName 77",
+        "email": "user77@example.com",
+        "phone": "+1234567877",
+        "balance": 8954.35,
+        "role": "Seller",
+        "status": "blocked"
+    },
+    {
+        "id": "712d0421-a701-40b7-9be5-aa7be44baff6",
+        "userName": "user78",
+        "fullName": "User FullName 78",
+        "email": "user78@example.com",
+        "phone": "+1234567878",
+        "balance": 1863.14,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "08fcdd3f-6c0c-49bb-819e-157bc5997e42",
+        "userName": "user79",
+        "fullName": "User FullName 79",
+        "email": "user79@example.com",
+        "phone": "+1234567879",
+        "balance": 3084.37,
+        "role": "Technician",
+        "status": "active"
+    },
+    {
+        "id": "a378183e-6d43-4baa-9048-09fd8c05a1eb",
+        "userName": "user80",
+        "fullName": "User FullName 80",
+        "email": "user80@example.com",
+        "phone": "+1234567880",
+        "balance": 9017.89,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "b2baade6-06c6-42c6-b4e3-4a1dca6d6e58",
+        "userName": "user81",
+        "fullName": "User FullName 81",
+        "email": "user81@example.com",
+        "phone": "+1234567881",
+        "balance": 9858.1,
+        "role": "Technician",
+        "status": "blocked"
+    },
+    {
+        "id": "08e72924-ea6c-4661-bd47-a1be4a82d8d1",
+        "userName": "user82",
+        "fullName": "User FullName 82",
+        "email": "user82@example.com",
+        "phone": "+1234567882",
+        "balance": 8178.88,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "fbc7ec81-1f50-4ea6-b7f1-d48eff98dd37",
+        "userName": "user83",
+        "fullName": "User FullName 83",
+        "email": "user83@example.com",
+        "phone": "+1234567883",
+        "balance": 2593.13,
+        "role": "Seller",
+        "status": "active"
+    },
+    {
+        "id": "59f3d0fa-17b3-453a-846e-1442b1e78718",
+        "userName": "user84",
+        "fullName": "User FullName 84",
+        "email": "user84@example.com",
+        "phone": "+1234567884",
+        "balance": 3421.05,
+        "role": "Seller",
+        "status": "active"
+    },
+    {
+        "id": "4a47732d-f36f-440a-891d-f8ed676f3ed9",
+        "userName": "user85",
+        "fullName": "User FullName 85",
+        "email": "user85@example.com",
+        "phone": "+1234567885",
+        "balance": 9158.27,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "53335f30-7844-4ca1-a9c8-a3ce4dc2de9e",
+        "userName": "user86",
+        "fullName": "User FullName 86",
+        "email": "user86@example.com",
+        "phone": "+1234567886",
+        "balance": 827.98,
+        "role": "User",
+        "status": "rejected"
+    },
+    {
+        "id": "5af5bb99-ba39-4fd4-8c38-98101a83cabd",
+        "userName": "user87",
+        "fullName": "User FullName 87",
+        "email": "user87@example.com",
+        "phone": "+1234567887",
+        "balance": 253.59,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "fd2fd050-a021-45fb-8b83-f6a3da9a3ff5",
+        "userName": "user88",
+        "fullName": "User FullName 88",
+        "email": "user88@example.com",
+        "phone": "+1234567888",
+        "balance": 7099.34,
+        "role": "User",
+        "status": "blocked"
+    },
+    {
+        "id": "2aa1fa86-4fe8-4c33-a247-55e2f57a89a5",
+        "userName": "user89",
+        "fullName": "User FullName 89",
+        "email": "user89@example.com",
+        "phone": "+1234567889",
+        "balance": 6857.14,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "c2a1c204-cc7d-48e7-87a6-2f32e9a20338",
+        "userName": "user90",
+        "fullName": "User FullName 90",
+        "email": "user90@example.com",
+        "phone": "+1234567890",
+        "balance": 7742.28,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "a6fde3e9-9655-447a-abf9-161eeff731b7",
+        "userName": "user91",
+        "fullName": "User FullName 91",
+        "email": "user91@example.com",
+        "phone": "+1234567891",
+        "balance": 5008.23,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "a64ffa23-7ef2-4ae2-9d5f-82aea035d479",
+        "userName": "user92",
+        "fullName": "User FullName 92",
+        "email": "user92@example.com",
+        "phone": "+1234567892",
+        "balance": 3606.87,
+        "role": "User",
+        "status": "active"
+    },
+    {
+        "id": "9eb5d678-a6b2-456a-b1df-c8660972218b",
+        "userName": "user93",
+        "fullName": "User FullName 93",
+        "email": "user93@example.com",
+        "phone": "+1234567893",
+        "balance": 9658.51,
+        "role": "Technician",
+        "status": "pending"
+    },
+    {
+        "id": "aef529c5-f222-4696-be35-495f592aeef9",
+        "userName": "user94",
+        "fullName": "User FullName 94",
+        "email": "user94@example.com",
+        "phone": "+1234567894",
+        "balance": 6322.22,
+        "role": "User",
+        "status": "blocked"
+    },
+    {
+        "id": "90dde07b-1c8a-43dc-9a98-172d6cb6b423",
+        "userName": "user95",
+        "fullName": "User FullName 95",
+        "email": "user95@example.com",
+        "phone": "+1234567895",
+        "balance": 7117.12,
+        "role": "Manager",
+        "status": "rejected"
+    },
+    {
+        "id": "55f4f7a9-e0ef-4b1e-a593-64ccafb50bef",
+        "userName": "user96",
+        "fullName": "User FullName 96",
+        "email": "user96@example.com",
+        "phone": "+1234567896",
+        "balance": 1029.18,
+        "role": "Seller",
+        "status": "pending"
+    },
+    {
+        "id": "fdd08641-6e8b-46a0-aea2-33def515e550",
+        "userName": "user97",
+        "fullName": "User FullName 97",
+        "email": "user97@example.com",
+        "phone": "+1234567897",
+        "balance": 8182.79,
+        "role": "Manager",
+        "status": "active"
+    },
+    {
+        "id": "7e47fc47-6107-4a7b-989b-60e4384cae4e",
+        "userName": "user98",
+        "fullName": "User FullName 98",
+        "email": "user98@example.com",
+        "phone": "+1234567898",
+        "balance": 8443.97,
+        "role": "Technician",
+        "status": "rejected"
+    },
+    {
+        "id": "92e07707-9ce4-4def-99c7-f72125219595",
+        "userName": "user99",
+        "fullName": "User FullName 99",
+        "email": "user99@example.com",
+        "phone": "+1234567899",
+        "balance": 1040.7,
+        "role": "Manager",
+        "status": "blocked"
+    },
+    {
+        "id": "377cf0c3-d9ec-4f55-a36c-27e36cc5143b",
+        "userName": "user100",
+        "fullName": "User FullName 100",
+        "email": "user100@example.com",
+        "phone": "+12345678100",
+        "balance": 3921.22,
+        "role": "Seller",
+        "status": "pending"
+    }
+]
