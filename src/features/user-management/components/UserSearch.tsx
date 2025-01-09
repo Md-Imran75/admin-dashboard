@@ -1,30 +1,32 @@
 import { Search } from '@/components/custom/search';
-import { useUserContext } from '../hooks/useUserContest';
+import { useUserContext } from '../hooks/useUserContext';
 import { ChangeEvent, useEffect, useState, useTransition } from 'react';
 import { debounce } from '@/utils/debounce';
 
 const debouncedQuery = debounce(
-	(query: string, updateSearch: (q: string) => void) => {
-		updateSearch(query);
+	(query: string, setQuery: (q: string) => void) => {
+		setQuery(query);
 	},
 	500
 );
 
 export const UserSearch = () => {
-	const { updateSearch, filter } = useUserContext();
-	const [query, setQuery] = useState(filter.query || '');
+
+	const {state,setQuery} = useUserContext();
+
+	const [query, setQuerys] = useState(state.query || '');
 
 	const [, startTransition] = useTransition();
 
 	useEffect(() => {
-		setQuery(filter.query || '');
-	}, [filter.query]);
+		setQuerys(state.query || '');
+	}, [state.query]);
 
 	const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
 		const value = event.target.value;
 		setQuery(value);
 		startTransition(() => {
-			debouncedQuery(value, updateSearch);
+			debouncedQuery(value, setQuery);
 		});
 	};
 

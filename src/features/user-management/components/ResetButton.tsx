@@ -1,5 +1,5 @@
 import { Button } from '@/components/custom/button';
-import { useUserContext } from '../hooks/useUserContest';
+import { useUserContext } from '../hooks/useUserContext';
 
 export const ResetButton = () => {
 	const { resetFilter } = useUserContext();

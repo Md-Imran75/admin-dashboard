@@ -17,6 +17,7 @@ interface SelectProps
 	value?: string;
 	onChange?: (value: string) => void;
 	selectSize?: 'sm' | 'md' | 'lg';
+	[key: string]: any;
 }
 
 const SelectContext = createContext<{

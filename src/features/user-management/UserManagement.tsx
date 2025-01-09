@@ -5,25 +5,31 @@ import { UserFilter } from './components/UserFilter.tsx';
 import { UserSearch } from './components/UserSearch.tsx';
 import { UserTable } from './components/UserTable.tsx';
 import { UserProvider } from './UserProvider';
-import { useFetchUsers } from './hooks/useFetchUsers';
-import { useUserContext } from './hooks/useUserContest.tsx';
+import { useUserContext } from './hooks/useUserContext.tsx';
+
+import { UserAPI } from '@/apis/userApi.ts';
+
+
 
 export const UserManagement = () => {
 	return (
+		
 		<UserProvider>
 			<UserManagementContent />
 		</UserProvider>
+	
 	);
 };
 
 UserManagement.displayName = 'UserManagement';
 
 const UserManagementContent = () => {
-	const { isLoading, error } = useFetchUsers();
-	const { pagination, updatePage, updatePageSize, users } = useUserContext();
-
+	
+	const {state, setPage, setLimit} = useUserContext();
+	const {data, error, isLoading} : any = UserAPI.useUsers(state);
+    
 	return (
-		<div className='md:mx-0 mx-3 mt-5 mb-20'>
+		<div className='mb-40'>
 			<PageHeader />
 			<div className='mt-6' />
 			<div className='space-y-6'>
@@ -39,17 +45,17 @@ const UserManagementContent = () => {
 					</div>
 				</div>
 				<UserTable
-					users={users}
+					users={data?.data}
 					isLoading={isLoading}
-					error={error?.message ? '' : undefined}
+					error={ error?.message ? error.message : ""}
 				/>
 				<Pagination
-					key={`${pagination.page}-${pagination.pageSize}`}
-					totalPages={pagination.totalPage}
-					currentPage={pagination.page}
-					onPageChange={updatePage}
-					onPageSizeChange={updatePageSize}
-					pageSize={pagination.pageSize}
+					key={`${data?.metaData.currentPage}-${data?.metaData.limit}`}
+					totalPages={data?.metaData.totalPages}
+					currentPage={data?.metaData.currentPage}
+					onPageChange={setPage}
+					onPageSizeChange={setLimit}
+					pageSize={data?.metaData.limit}
 					disabled={isLoading}
 				/>
 			</div>

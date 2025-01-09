@@ -19,7 +19,7 @@ export const UserTable = ({ users, isLoading, error }: UserTableProps) => {
 		if (users.length === 0) return <UserTableNoData />;
 		return <UserTableBody users={users} />;
 	};
-
+    
 	return (
 		<div>
 			<Table>
@@ -46,8 +46,8 @@ const UserTableBody = ({ users }: { users: User[] }) => {
 	return (
 		<Table.Body>
 			{users.map((user) => (
-				<Table.Row key={user.id} className='group'>
-					<Table.Cell>{user.id.split('-')[0]}</Table.Cell>
+				<Table.Row key={user._id} className='group'>
+					<Table.Cell>{user._id.split('-')[0]}</Table.Cell>
 					<Table.Cell className='font-medium'>{user.fullName}</Table.Cell>
 					<Table.Cell className='font-medium'>{user.userName}</Table.Cell>
 					<Table.Cell>{user.email}</Table.Cell>
@@ -92,7 +92,7 @@ const UserTableSkeleton = () => {
 						<div className='h-4 w-32 animate-pulse rounded bg-gray-200' />
 					</Table.Cell>
 					<Table.Cell>
-						<div className='h-4 w-48 animate-pulse rounded bg-gray-200' />
+						<div className='h-4 w-8 animate-pulse rounded bg-gray-200' />
 					</Table.Cell>
 					<Table.Cell>
 						<div className='h-4 w-20 animate-pulse rounded bg-gray-200' />
@@ -110,7 +110,7 @@ const UserTableNoData = () => {
 	return (
 		<Table.Body>
 			<Table.Row className='col-span-full'>
-				<Table.Cell colSpan={5}>
+				<Table.Cell colSpan={7}>
 					<div className='p-4 text-center'>
 						<h3 className='mb-2 text-lg font-semibold text-gray-600'>
 							No users found
@@ -129,7 +129,7 @@ const UserTableError = ({ message }: { message: string }) => {
 	return (
 		<Table.Body>
 			<Table.Row>
-				<Table.Cell colSpan={5}>
+				<Table.Cell colSpan={7}>
 					<div className='p-4 text-center'>
 						<div className='mb-4 flex justify-center'>
 							<ErrorInfoIcon className='text-red-600' size={48} />

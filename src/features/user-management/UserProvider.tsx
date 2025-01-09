@@ -1,38 +1,51 @@
-import { createContext, Dispatch, PropsWithChildren, useReducer } from 'react';
+import { createContext, PropsWithChildren, useContext, useReducer, useState } from 'react';
 import { Action, State } from './types';
 
 const initialState: State = {
-	users: [],
-	filter: {},
-	sort: { column: 'id', direction: 'asc' },
 	page: 1,
-	pageSize: 10,
-	totalPages: 0,
-	totalUsers: 0,
+	limit: 10,
+	sortBy: "_id",
+	sortDirection: "asc",
 };
 
-const reducer = (state: State, action: Action): State => {
+const userReducer = (state: State, action: Action): State => {
 	switch (action.type) {
-		case 'SET_STATE':
-			return action.payload;
-		case 'UPDATE_STATE':
+		case "SET_PAGE":
+			return { ...state, page: action.payload };
+		case "SET_LIMIT":
+			return { ...state, limit: action.payload };
+		case "SET_SORT":
 			return { ...state, ...action.payload };
-		case 'RESET':
+		case "SET_FILTER":
+			return { ...state, ...action.payload, page: 1 };
+		case "SET_QUERY":
+			return { ...state, query: action.payload, page: 1 };
+		case "RESET":
 			return initialState;
 		default:
-			throw new Error('Invalid action type');
+			return state;
 	}
 };
 
-export const UserContext = createContext<{
+// Context types
+interface AppContextProps {
 	state: State;
-	dispatch: Dispatch<Action>;
-}>({ state: initialState, dispatch: () => {} });
+	dispatch: React.Dispatch<Action>;
+}
+
+
+export const UserContext = createContext<AppContextProps>(
+	{
+		state: initialState,
+		dispatch: () => { }
+	}
+);
 
 export const UserProvider = (props: PropsWithChildren) => {
-	const [state, dispatch] = useReducer(reducer, initialState);
+	const [state, dispatch] = useReducer(userReducer, initialState);
 
 	return (
 		<UserContext value={{ state, dispatch }}>{props.children}</UserContext>
 	);
 };
+

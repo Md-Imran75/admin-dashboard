@@ -1,9 +1,10 @@
 import { Select } from '@/components/custom/select';
-import { useUserContext } from '../hooks/useUserContest';
-import type { Role, SortColumn, SortDirection, Status } from '../types';
+import { useUserContext } from '../hooks/useUserContext';
+import type { Role,  State, Status, User } from '../types';
 
 export const UserFilter = () => {
-	const { filter, sort, updateFilter, updateSort } = useUserContext();
+	
+	const {state, setSort, setFilter,  } = useUserContext();
 
 	return (
 		<div className='flex gap-2'>
@@ -11,15 +12,15 @@ export const UserFilter = () => {
 				label='Role'
 				options={[
 					{ text: 'All', value: '' },
-					{ text: 'User', value: 'User' },
-					{ text: 'Seller', value: 'Seller' },
-					{ text: 'Manager', value: 'Manager' },
-					{ text: 'Technician', value: 'Technician' },
+					{ text: 'User', value: 'user' },
+					{ text: 'Seller', value: 'seller' },
+					{ text: 'Manager', value: 'manager' },
+					{ text: 'Technician', value: 'technician' },
 
 				]}
-				value={filter.role ?? ''}
-				key={filter.role ?? 'default_role'}
-				onChange={(value) => updateFilter({ role: value as Role })}
+				value={state.role ?? ''}
+				key={state.role ?? 'default_role'}
+				onChange={(value) => setFilter(value as Role, state.status)}
 			/>
 			<Select
 				label='status'
@@ -30,9 +31,9 @@ export const UserFilter = () => {
 					{ text: 'Pending', value: 'pending' },
 					{ text: 'Blocked', value: 'blocked' },
 				]}
-				value={filter.status ?? ''}
-				key={filter.status ?? 'default_status'}
-				onChange={(value) => updateFilter({ status: value as Status })}
+				value={state.status ?? ''}
+				key={state.status ?? 'default_status'}
+				onChange={(value) => setFilter(state.role, value as Status)}
 			/>
 			<Select
 				label='Sort By'
@@ -43,9 +44,9 @@ export const UserFilter = () => {
 					{ text: 'Role', value: 'role' },
 					{ text: 'Status', value: 'status' },
 				]}
-				value={sort.column ?? ''}
-				key={sort.column ?? 'default_column'}
-				onChange={(value) => updateSort({ column: value as SortColumn })}
+				value={state.sortBy ?? ''}
+				key={state.sortBy ?? 'default_column'}
+				onChange={(value) => setSort(value as keyof User, state.sortDirection)}
 			/>
 
 			<Select
@@ -54,9 +55,9 @@ export const UserFilter = () => {
 					{ text: 'Ascending', value: 'asc' },
 					{ text: 'Descending', value: 'desc' },
 				]}
-				value={sort.direction}
-				key={sort.direction ?? 'default_direction'}
-				onChange={(value) => updateSort({ direction: value as SortDirection })}
+				value={state.sortDirection}
+				key={state.sortDirection?? 'default_direction'}
+				onChange={(value) => setSort(state.sortBy , value as "asc" | "desc")}
 			/>
 		</div>
 	);
