@@ -1,15 +1,24 @@
 import { EditPencilIcon, TrashIcon } from '@/components/icons';
 import { EyeIcon } from '@/components/icons';
 import { IconButton } from '@/components/custom/iconButton';
-import { memo } from 'react';
+import { memo, useState, } from 'react';
+import { UpdateUserForm } from './updateForm';
 
-export const UserRowActions = memo(() => {
+export const UserRowActions = memo(({ data }: any) => {
+	const [isEditButtonOpen, setIsEditButtonOpen] = useState(false);
 	const classes = `hover:bg-zinc-200 p-1`;
 
 	return (
 		<>
 			<IconButton icon={EyeIcon} size={15} className={classes} />
-			<IconButton icon={EditPencilIcon} size={15} className={classes} />
+			{
+				!isEditButtonOpen && <IconButton onClick={() => setIsEditButtonOpen(!isEditButtonOpen)} icon={EditPencilIcon} size={15} className={classes} />
+			}
+
+			{
+				isEditButtonOpen && <UpdateUserForm data={data} />
+			}
+
 			<IconButton
 				icon={TrashIcon}
 				size={15}

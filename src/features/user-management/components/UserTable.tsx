@@ -63,7 +63,7 @@ const UserTableBody = ({ users }: { users: User[] }) => {
 							{titleCase(user.status)}
 						</span>
 						<div className='hidden group-hover:inline-flex justify-end items-center gap-2'>
-							<UserRowActions />
+							<UserRowActions data={user} />
 						</div>
 					</Table.Cell>
 				</Table.Row>

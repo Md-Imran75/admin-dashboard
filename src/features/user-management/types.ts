@@ -32,3 +32,16 @@ export type Action =
   | { type: "RESET"};
 
   
+export const roleOptions = [
+	{ value: 'user', text: 'User' },
+	{ value: 'seller', text: 'Seller' },
+	{ value: 'manager', text: 'Manager' },
+	{ value: 'technician', text: 'Technician' },
+  ];
+  
+export   const statusOptions = [
+	{ value: 'pending', text: 'Pending' },
+	{ value: 'active', text: 'Active' },
+	{ value: 'rejected', text: 'Rejected' },
+	{ value: 'blocked', text: 'Blocked' },
+  ];

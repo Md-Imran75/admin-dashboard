@@ -39,6 +39,33 @@ export const createUser = createAsyncThunk(
   }
 );
 
+export const updateUser = createAsyncThunk(
+  'user/updateUser',
+  async (values : CreateUserFormValues, { rejectWithValue }) => {
+    console.log(values)
+    try {
+      const response = await axiosInstance.put('/admin/dashboard/user-management/update-user', values);
+      console.log(response)
+      return response.data;
+    } catch (error: unknown) {
+      console.log(error)
+      if (axios.isAxiosError(error) && error.response) {
+        if (error.response && error.response.data instanceof Blob) {
+          const errorText = await error.response.data.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(errorText, 'text/html');
+          const preTag = doc.querySelector('pre');
+          const errorMessage = preTag ? preTag.textContent : 'An unknown error occurred';
+          console.error('Error:', errorMessage);
+        } else {
+          console.error('Error:', error.message);
+        }
+      }
+      return rejectWithValue(error);
+    }
+  }
+);
+
 const userManageMentSlice = createSlice({
   name: 'userManagement',
   initialState: {
@@ -51,6 +78,7 @@ const userManageMentSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+    //create user
       .addCase(createUser.pending, (state, _) => {
         state.loading = true;
         state.error = null;
@@ -65,7 +93,25 @@ const userManageMentSlice = createSlice({
         console.log(action.payload)
         state.loading = false;
         state.message = action.payload.response.data.errorMessage;
-      });
+      })
+    
+    //update user
+    .addCase(updateUser.pending, (state, _) => {
+      state.loading = true;
+      state.error = null;
+    })
+    .addCase(updateUser.fulfilled, (state, action) => {
+      console.log(action.payload)
+      state.loading = false;
+      state.success = true;
+      state.message = action.payload.message;
+    })
+    .addCase(updateUser.rejected, (state, action: any) => {
+      console.log(action.payload)
+      state.loading = false;
+      state.message = action.payload.response.data.errorMessage;
+    });
+    
   },
 });
 

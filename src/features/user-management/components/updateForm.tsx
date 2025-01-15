@@ -1,5 +1,4 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
-import { z } from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
 import { Button } from '@/components/custom/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -8,58 +7,53 @@ import { Input } from '@/components/custom/input';
 import FormikSelect from './FormikSelect';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState, AppDispatch } from '@/app/store';
-import { createUser } from '@/app/features/auth/user.management,slice';
+import { updateUser } from '@/app/features/auth/user.management,slice';
 import { useToast } from "../../../hooks/use-toast"
 import { useEffect, useState } from 'react';
-import { UserSchema } from '../utils';
+import { UpdateUserSchema } from '../utils';
+import { z } from 'zod';
+import { IconButton } from '@/components/custom/iconButton';
+import { EditPencilIcon } from '@/components/icons';
+import { roleOptions, statusOptions } from '../types';
 
 
 
-export type CreateUserFormValues = z.infer<typeof UserSchema>;
+export type CreateUserFormValues = z.infer<typeof UpdateUserSchema>;
 
-const roleOptions = [
-  { value: 'user', text: 'User' },
-  { value: 'seller', text: 'Seller' },
-  { value: 'manager', text: 'Manager' },
-  { value: 'technician', text: 'Technician' },
-];
 
-const statusOptions = [
-  { value: 'pending', text: 'Pending' },
-  { value: 'active', text: 'Active' },
-  { value: 'rejected', text: 'Rejected' },
-  { value: 'blocked', text: 'Blocked' },
-];
 
-const initialValues: CreateUserFormValues = {
-  userName: '',
-  fullName: '',
-  email: '',
-  password: '',
-  phone: '',
-  role: '',
-  status: ''
-};
-
-export function CreateUserForm() {
+export function UpdateUserForm({ data }: any) {
+  console.log(data)
   const { toast } = useToast()
   const dispatch: AppDispatch = useDispatch();
-  const { loading, message : apiMessage} = useSelector((state: RootState) => state.userManagement);
-  const [ message, setMessage] = useState("");
-  
+  const { loading } = useSelector((state: RootState) => state.userManagement);
+  const [message, setMessage] = useState("");
+
+  const initialValues: CreateUserFormValues = {
+    userName: data.userName ?? '',
+    fullName: data.fullName ?? '',
+    email: data.email ?? '',
+    password: '',
+    phone: data.phone ?? '',
+    role: data.role ?? '',
+    status: data.status ?? '',
+    balance: data.balance ?? 0,
+    id: data?._id ?? ''
+  };
+
   const onSubmit = async (
     values: CreateUserFormValues,
     { resetForm }: FormikHelpers<CreateUserFormValues>
   ) => {
     try {
-      const result = await dispatch(createUser(values)).unwrap(); // Use `unwrap` to handle async result
-      setMessage(result.message || "User created successfully!"); // Set success message
+      const result = await dispatch(updateUser(values as any)).unwrap(); // Use `unwrap` to handle async result
+      setMessage(result.message || "User updated successfully!"); // Set success message
       resetForm();
     } catch (error: any) {
-      setMessage(error.response.data.errorMessage || "Failed to create user."); // Set error message
+      setMessage(error.response.data.errorMessage || "Failed to update user."); // Set error message
     }
   };
-  
+
   useEffect(() => {
     if (message) {
       toast({
@@ -70,22 +64,34 @@ export function CreateUserForm() {
   }, [message, toast]);
 
   return (
-    <Dialog>
+      <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Add User</Button>
+        <IconButton icon={EditPencilIcon} size={15} />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Add New User</DialogTitle>
+          <DialogTitle>Update User</DialogTitle>
           <DialogDescription>Fill all the fields carefully.</DialogDescription>
         </DialogHeader>
         <Formik
           initialValues={initialValues}
-          validationSchema={toFormikValidationSchema(UserSchema)}
+          validationSchema={toFormikValidationSchema(UpdateUserSchema)}
           onSubmit={onSubmit}
         >
           {() => (
-            <Form className="mt-5">
+            <Form className="mt-5 overflow-y-scroll h-[500px]">
+
+              <Field
+                name="id"
+                as={Input}
+                className="mb-3"
+                required
+                label="User Id"
+                type="text"
+                disabled
+              />
+              <ErrorMessage name="id" component="div" className="text-red-500 text-sm mb-2" />
+
               <Field
                 name="userName"
                 as={Input}
@@ -124,7 +130,6 @@ export function CreateUserForm() {
                 as={Input}
                 className="mb-3"
                 placeholder="Password"
-                required
                 label="Password"
                 type="password"
               />
@@ -141,9 +146,21 @@ export function CreateUserForm() {
               />
               <ErrorMessage name="phone" component="div" className="text-red-500 text-sm mb-2" />
 
+              <Field
+                name="balance"
+                as={Input}
+                className="mb-3"
+                placeholder="Balance"
+                required
+                label="Balance"
+                type="number"
+              />
+              <ErrorMessage name="balance" component="div" className="text-red-500 text-sm mb-2" />
+
               <FormikSelect
                 label="Role"
                 name="role"
+                className='mb-3'
                 options={roleOptions}
               />
               <ErrorMessage name="role" component="div" className="text-red-500 text-sm mb-2" />
@@ -157,7 +174,7 @@ export function CreateUserForm() {
 
               <DialogFooter>
                 <Button className="mt-5" disabled={loading} type="submit">
-                  { loading ? 'Creating...' : 'Create User'}
+                  {loading ? 'Updating...' : 'Update User'}
                 </Button>
               </DialogFooter>
             </Form>
