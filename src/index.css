@@ -151,3 +151,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* App.css */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #25282b #f8f9fa; /* Thumb and track colors */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f8f9fa; /* Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6c757d; /* Thumb color */
+  border-radius: 20px; /* Rounded corners */
+  border: 3px solid #25282b; /* Adds padding around thumb */
+}

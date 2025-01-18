@@ -6,6 +6,7 @@ import DashBoard from "./features/dashboard/DashBoard";
 import Login from "./features/auth/Login";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { QueryClient, QueryClientProvider } from "react-query";
+import ViewUser from "./features/user-management/components/viewUser";
 
 export const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ function App() {
               <UserManagement />
             </QueryClientProvider>
           } />
+          <Route path="user/:id" element={<ViewUser />} />
         </Route>
       </Routes>
     </div>

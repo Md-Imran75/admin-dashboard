@@ -79,7 +79,7 @@ export function UpdateUserForm({ data }: any) {
           onSubmit={onSubmit}
         >
           {() => (
-            <Form className="mt-5 overflow-y-scroll h-[500px]">
+            <Form className="mt-5 overflow-y-scroll h-[500px] custom-scrollbar">
 
               <Field
                 name="id"

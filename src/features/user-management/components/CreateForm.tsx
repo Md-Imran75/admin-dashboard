@@ -44,7 +44,7 @@ const initialValues: CreateUserFormValues = {
 export function CreateUserForm() {
   const { toast } = useToast()
   const dispatch: AppDispatch = useDispatch();
-  const { loading, message : apiMessage} = useSelector((state: RootState) => state.userManagement);
+  const { loading} = useSelector((state: RootState) => state.userManagement);
   const [ message, setMessage] = useState("");
   
   const onSubmit = async (
@@ -85,7 +85,7 @@ export function CreateUserForm() {
           onSubmit={onSubmit}
         >
           {() => (
-            <Form className="mt-5">
+            <Form className="mt-5 overflow-y-scroll h-[500px] custom-scrollbar">
               <Field
                 name="userName"
                 as={Input}
