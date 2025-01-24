@@ -1,4 +1,4 @@
-import { ListOrdered, Home, User, Bike, Store, Wallet, HandCoins, Megaphone, LogOut } from 'lucide-react'
+import { ListOrdered, Home, User, Bike, Store, Wallet, HandCoins, Megaphone} from 'lucide-react'
 import { MdLogout } from "react-icons/md";
 
 import {
@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import { useAuth } from '@/features/auth/hooks/useAuth';
 
 const items = [
@@ -26,15 +26,16 @@ const items = [
     icon: User,
   },
   {
-    title: "Order-Management",
-    url: "/order-management",
-    icon: ListOrdered,
-  },
-  {
     title: "Bike-Management",
     url: "/bike-management",
     icon: Bike,
   },
+  {
+    title: "Order-Management",
+    url: "#",
+    icon: ListOrdered,
+  },
+
   {
     title: "Accessories-Management",
     url: "#",

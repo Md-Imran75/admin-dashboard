@@ -70,9 +70,36 @@ export const updateUser = createAsyncThunk(
 export const viewUserById = createAsyncThunk(
   'user/viewUserById',
   async ({id} : {id: String | undefined}, { rejectWithValue }) => {
-    console.log(id)
     try {
       const response = await axiosInstance.get('/admin/dashboard/user-management/view-user', {
+        params: {id}
+      });
+      return response.data;
+    } catch (error: unknown) {
+      console.log(error)
+      if (axios.isAxiosError(error) && error.response) {
+        if (error.response && error.response.data instanceof Blob) {
+          const errorText = await error.response.data.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(errorText, 'text/html');
+          const preTag = doc.querySelector('pre');
+          const errorMessage = preTag ? preTag.textContent : 'An unknown error occurred';
+          console.error('Error:', errorMessage);
+        } else {
+          console.error('Error:', error.message);
+        }
+      }
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const deleteUserById = createAsyncThunk(
+  'user/deleteUserById',
+  async ({id} : {id: String | undefined}, { rejectWithValue }) => {
+    console.log(id)
+    try {
+      const response = await axiosInstance.get('/admin/dashboard/user-management/delete-user', {
         params: {id}
       });
       return response.data;
@@ -105,7 +132,11 @@ const userManageMentSlice = createSlice({
     success: false
   } as userManagement,
 
-  reducers: {},
+  reducers: {
+    clearMessage: (state) => {
+      state.message = ""
+    }
+  },
   extraReducers: (builder) => {
     builder
     //create user
@@ -158,9 +189,26 @@ const userManageMentSlice = createSlice({
       console.log(action.payload)
       state.loading = false;
       state.message = action.payload.response.data.errorMessage;
-    });
+    })
+
+    //deleteUserById
+    .addCase(deleteUserById.pending, (state, _) => {
+      state.loading = true;
+      state.error = null;
+    })
+    .addCase(deleteUserById.fulfilled, (state, action) => {
+      state.loading = false;
+      state.success = true;
+      state.message = action.payload.message;
+    })
+    .addCase(deleteUserById.rejected, (state, action: any) => {
+      console.log(action.payload)
+      state.loading = false;
+      state.message = action.payload.response.data.errorMessage;
+    })
     
   },
 });
 
+export const {clearMessage} = userManageMentSlice.actions;
 export default userManageMentSlice.reducer;

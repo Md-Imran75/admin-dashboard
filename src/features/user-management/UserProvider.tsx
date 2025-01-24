@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useContext, useReducer, useState } from 'react';
+import { createContext, PropsWithChildren, useReducer} from 'react';
 import { Action, State } from './types';
 
 const initialState: State = {

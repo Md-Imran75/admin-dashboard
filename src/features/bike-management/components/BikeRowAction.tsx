@@ -15,7 +15,7 @@ interface User {
     [key: string]: any;
 }
 
-export const UserRowActions = memo(({ data }: { data: User }) => {
+export const BikeRowActions = memo(({ data }: { data: User }) => {
     const { toast } = useToast();
     const dispatch = useDispatch<AppDispatch>();
     const { message } = useSelector((state: RootState) => state.userManagement);
@@ -51,7 +51,7 @@ export const UserRowActions = memo(({ data }: { data: User }) => {
                     </DialogHeader>
 
                     {/* update form */}
-                    <UpdateUserForm data={data} />
+                    {/* <UpdateUserForm data={data} /> */}
                 </DialogContent>
             </Dialog>
 
@@ -69,4 +69,4 @@ export const UserRowActions = memo(({ data }: { data: User }) => {
     );
 });
 
-UserRowActions.displayName = 'UserRowActions';
+BikeRowActions.displayName = 'BikeRowActions';

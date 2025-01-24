@@ -1,14 +1,22 @@
 import { ModeToggle } from "./features/theme/components/mode-toggle";
-import { UserManagement } from "./features/user-management";
 import { Routes, Route } from "react-router-dom"; // Correct import
 import MainLayout from "./pages/MainLayout";
 import DashBoard from "./features/dashboard/DashBoard";
 import Login from "./features/auth/Login";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { QueryClient, QueryClientProvider } from "react-query";
-import ViewUser from "./features/user-management/components/viewUser";
 
+//user management 
+import { UserManagement } from "./features/user-management";
+import ViewUser from "./features/user-management/components/ViewUser";
+
+//bike management
+import { BikeManageMent } from "./features/bike-management";
+
+
+//create a client
 export const queryClient = new QueryClient();
+
 
 function App() {
   return (
@@ -24,6 +32,12 @@ function App() {
           <Route path="user-management" element={
             <QueryClientProvider client={queryClient}>
               <UserManagement />
+            </QueryClientProvider>
+          } />
+          
+          <Route path="bike-management" element={
+            <QueryClientProvider client={queryClient}>
+              <BikeManageMent />
             </QueryClientProvider>
           } />
           <Route path="user/:id" element={<ViewUser />} />

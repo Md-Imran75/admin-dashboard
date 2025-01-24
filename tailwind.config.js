@@ -63,5 +63,10 @@ module.exports = {
   		}
   	}
   },
+  variants: {
+    extend: {
+      animation: ["group-hover", "group-focus", "data-state"],
+    },
+  },
   plugins: [require("tailwindcss-animate")],
 }
